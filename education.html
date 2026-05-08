@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Education | Justin Villanueva Portfolio</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f6f8;
+    color:#333;
+    line-height:1.6;
+}
+
+/* HEADER */
+header{
+    background:#0a3d62;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.nav{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 20px;
+}
+
+.logo{
+    color:white;
+    font-size:24px;
+    font-weight:bold;
+}
+
+nav{
+    display:flex;
+    gap:18px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#38ada9;
+}
+
+.menu{
+    display:none;
+    color:white;
+    font-size:28px;
+    cursor:pointer;
+}
+
+/* HERO */
+.hero{
+    background:linear-gradient(to right,#1e90ff,#38ada9);
+    color:white;
+    text-align:center;
+    padding:80px 20px;
+}
+
+.hero h1{
+    font-size:48px;
+    margin-bottom:10px;
+}
+
+.hero p{
+    font-size:20px;
+}
+
+/* CONTAINER */
+.container{
+    max-width:1150px;
+    margin:40px auto;
+    padding:20px;
+}
+
+/* EDUCATION BOX */
+.education-box{
+    background:white;
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom:30px;
+}
+
+.education-box h2{
+    color:#0a3d62;
+    margin-bottom:25px;
+    font-size:35px;
+}
+
+/* TIMELINE */
+.timeline{
+    position:relative;
+    margin-top:20px;
+}
+
+.timeline::before{
+    content:"";
+    position:absolute;
+    left:20px;
+    top:0;
+    width:4px;
+    height:100%;
+    background:#1e90ff;
+}
+
+.timeline-item{
+    position:relative;
+    padding-left:60px;
+    margin-bottom:40px;
+}
+
+.timeline-item::before{
+    content:"";
+    position:absolute;
+    left:10px;
+    top:5px;
+    width:22px;
+    height:22px;
+    background:#38ada9;
+    border-radius:50%;
+    border:4px solid white;
+}
+
+.timeline-item h3{
+    color:#1e90ff;
+    margin-bottom:10px;
+    font-size:28px;
+}
+
+.timeline-item p{
+    font-size:17px;
+}
+
+/* CARDS */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    margin-top:30px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card h3{
+    color:#0a3d62;
+    margin-bottom:15px;
+    font-size:24px;
+}
+
+.card p{
+    font-size:16px;
+}
+
+/* QUOTE */
+.quote{
+    background:#0a3d62;
+    color:white;
+    text-align:center;
+    padding:50px 20px;
+    border-radius:15px;
+    margin-top:40px;
+}
+
+.quote h2{
+    font-size:35px;
+    margin-bottom:15px;
+}
+
+/* BUTTON */
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:14px 28px;
+    background:#1e90ff;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:white;
+    color:#0a3d62;
+}
+
+/* FOOTER */
+footer{
+    background:#0a3d62;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:50px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+    nav{
+        display:none;
+        flex-direction:column;
+        background:#0a3d62;
+        position:absolute;
+        top:60px;
+        left:0;
+        width:100%;
+    }
+
+    nav.show{
+        display:flex;
+    }
+
+    nav a{
+        padding:15px;
+        text-align:center;
+        border-top:1px solid rgba(255,255,255,0.2);
+    }
+
+    .menu{
+        display:block;
+    }
+
+    .hero h1{
+        font-size:35px;
+    }
+
+    .hero p{
+        font-size:17px;
+    }
+
+    .education-box{
+        padding:25px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+
+<div class="nav">
+
+<div class="logo">
+MyPortfolio
+</div>
+
+<div class="menu" onclick="toggleMenu()">☰</div>
+
+<nav id="nav">
+
+<a href="index.html">Home</a>
+<a href="gallery.html">Gallery</a>
+<a href="about.html">About</a>
+<a href="skills.html">Skills</a>
+<a href="education.html">Education</a>
+<a href="experience.html">Experiences</a>
+<a href="achievements.html">Achievements</a>
+<a href="hobbies.html">Hobbies</a>
+<a href="contact.html">Contact</a>
+<a href="resume.html">Resume</a>
+
+</nav>
+
+</div>
+
+</header>
+
+<!-- HERO -->
+<section class="hero">
+
+<h1>Educational Background</h1>
+
+<p>
+My academic journey, learning experiences, and educational achievements.
+</p>
+
+</section>
+
+<!-- MAIN CONTENT -->
+<div class="container">
+
+<!-- EDUCATION -->
+<div class="education-box">
+
+<h2>My Education Journey</h2>
+
+<div class="timeline">
+
+<!-- SENIOR HIGH -->
+<div class="timeline-item">
+
+<h3>🎓 Senior High School</h3>
+
+<p>
+Completed Senior High School with a focus on 
+Information and Communication Technology (ICT).
+<br><br>
+
+During this stage, I developed my interest in technology, computer systems, 
+and web development while improving my communication and problem-solving skills.
+</p>
+
+</div>
+
+<!-- COLLEGE -->
+<div class="timeline-item">
+
+<h3>🏫 College Education</h3>
+
+<p>
+Currently pursuing a <strong>Bachelor of Science in Office Administration</strong> 
+at Clark College of Science and Technology located in Dau, Mabalacat City, Pampanga.
+<br><br>
+
+I continue to improve my knowledge in leadership, office management, communication, 
+and web design while actively participating in school and community activities.
+</p>
+
+</div>
+
+<!-- LEARNING -->
+<div class="timeline-item">
+
+<h3>💻 Learning and Development</h3>
+
+<p>
+My education helped me develop discipline, creativity, leadership, teamwork, 
+and technical skills needed in academics, community service, and web development.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- CARDS -->
+<div class="cards">
+
+<!-- ACHIEVEMENT -->
+<div class="card">
+
+<h3>🏆 Academic Growth</h3>
+
+<p>
+Education helped me become more responsible, disciplined, and goal-oriented 
+in achieving success.
+</p>
+
+</div>
+
+<!-- LEADERSHIP -->
+<div class="card">
+
+<h3>🤝 Leadership Skills</h3>
+
+<p>
+School and youth activities enhanced my leadership, teamwork, and communication skills.
+</p>
+
+</div>
+
+<!-- TECHNOLOGY -->
+<div class="card">
+
+<h3>💡 Technology Skills</h3>
+
+<p>
+Learning web design and technology improved my creativity and technical abilities.
+</p>
+
+</div>
+
+</div>
+
+<!-- QUOTE -->
+<div class="quote">
+
+<h2>My Educational Vision</h2>
+
+<p>
+“Education is the foundation of leadership, growth, and success. 
+Through continuous learning, I strive to become a better student, leader, and professional.”
+</p>
+
+<a href="index.html" class="btn">
+← Back to Home
+</a>
+
+</div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+
+<p>
+© 2026 Justin Villanueva | Personal Portfolio
+</p>
+
+</footer>
+
+<!-- SCRIPT -->
+<script>
+
+function toggleMenu(){
+    document.getElementById("nav").classList.toggle("show");
+}
+
+</script>
+
+</body>
+</html>

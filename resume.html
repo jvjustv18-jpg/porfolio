@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Resume | Justin Villanueva Portfolio</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f6f8;
+    color:#333;
+    line-height:1.6;
+}
+
+/* HEADER */
+header{
+    background:#0a3d62;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.nav{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 20px;
+}
+
+.logo{
+    color:white;
+    font-size:24px;
+    font-weight:bold;
+}
+
+nav{
+    display:flex;
+    gap:18px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#38ada9;
+}
+
+.menu{
+    display:none;
+    color:white;
+    font-size:28px;
+    cursor:pointer;
+}
+
+/* HERO */
+.hero{
+    background:linear-gradient(to right,#1e90ff,#38ada9);
+    color:white;
+    text-align:center;
+    padding:80px 20px;
+}
+
+.hero h1{
+    font-size:48px;
+    margin-bottom:10px;
+}
+
+.hero p{
+    font-size:20px;
+}
+
+/* CONTAINER */
+.container{
+    max-width:1100px;
+    margin:40px auto;
+    padding:20px;
+}
+
+/* RESUME BOX */
+.resume-box{
+    background:white;
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* RESUME HEADER */
+.resume-header{
+    text-align:center;
+    border-bottom:3px solid #1e90ff;
+    padding-bottom:25px;
+    margin-bottom:35px;
+}
+
+.resume-header h2{
+    color:#0a3d62;
+    font-size:40px;
+    margin-bottom:10px;
+}
+
+.resume-header p{
+    font-size:18px;
+    margin:5px 0;
+}
+
+/* BUTTONS */
+.btn-group{
+    margin-top:20px;
+}
+
+.btn{
+    display:inline-block;
+    margin:10px;
+    padding:12px 25px;
+    background:#0a3d62;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+    transition:0.3s;
+    font-weight:bold;
+}
+
+.btn:hover{
+    background:#1e90ff;
+}
+
+/* SECTION */
+.section{
+    margin-bottom:35px;
+}
+
+.section h3{
+    color:#1e90ff;
+    margin-bottom:15px;
+    font-size:28px;
+    border-left:5px solid #1e90ff;
+    padding-left:12px;
+}
+
+.section p{
+    font-size:17px;
+}
+
+.section ul{
+    padding-left:20px;
+}
+
+.section li{
+    margin-bottom:12px;
+    font-size:17px;
+}
+
+/* SKILL BARS */
+.skill{
+    margin-bottom:20px;
+}
+
+.skill-title{
+    margin-bottom:8px;
+    font-weight:bold;
+}
+
+.bar{
+    width:100%;
+    background:#ddd;
+    border-radius:20px;
+    overflow:hidden;
+    height:24px;
+}
+
+.fill{
+    height:100%;
+    background:linear-gradient(to right,#1e90ff,#38ada9);
+    color:white;
+    text-align:right;
+    padding-right:10px;
+    line-height:24px;
+    font-size:14px;
+    font-weight:bold;
+}
+
+/* QUOTE */
+.quote{
+    background:#0a3d62;
+    color:white;
+    padding:40px;
+    border-radius:15px;
+    text-align:center;
+    margin-top:40px;
+}
+
+.quote h2{
+    margin-bottom:15px;
+    font-size:35px;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    background:#0a3d62;
+    color:white;
+    padding:20px;
+    margin-top:50px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+    nav{
+        display:none;
+        flex-direction:column;
+        background:#0a3d62;
+        position:absolute;
+        top:60px;
+        left:0;
+        width:100%;
+    }
+
+    nav.show{
+        display:flex;
+    }
+
+    nav a{
+        padding:15px;
+        text-align:center;
+        border-top:1px solid rgba(255,255,255,0.2);
+    }
+
+    .menu{
+        display:block;
+    }
+
+    .hero h1{
+        font-size:35px;
+    }
+
+    .hero p{
+        font-size:17px;
+    }
+
+    .resume-box{
+        padding:25px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+
+<div class="nav">
+
+<div class="logo">
+MyPortfolio
+</div>
+
+<div class="menu" onclick="toggleMenu()">☰</div>
+
+<nav id="nav">
+
+<a href="index.html">Home</a>
+<a href="gallery.html">Gallery</a>
+<a href="about.html">About</a>
+<a href="skills.html">Skills</a>
+<a href="education.html">Education</a>
+<a href="experience.html">Experience</a>
+<a href="achievements.html">Achievements</a>
+<a href="hobbies.html">Hobbies</a>
+<a href="contact.html">Contact</a>
+<a href="resume.html">Resume</a>
+
+</nav>
+
+</div>
+
+</header>
+
+<!-- HERO -->
+<section class="hero">
+
+<h1>My Resume</h1>
+
+<p>
+Professional profile, educational background, skills, and experiences.
+</p>
+
+</section>
+
+<!-- MAIN CONTENT -->
+<div class="container">
+
+<div class="resume-box">
+
+<!-- RESUME HEADER -->
+<div class="resume-header">
+
+<h2>Justin Villanueva</h2>
+
+<p>Dau, Mabalacat City, Pampanga, Philippines</p>
+
+<p>📧 justinvillanueva@email.com | 📱 +63 912 345 6789</p>
+
+<div class="btn-group">
+
+<!-- VIEW RESUME BUTTON -->
+<a href="resume.pdf" target="_blank" class="btn">
+👁 View Resume PDF
+</a>
+
+<!-- BACK BUTTON -->
+<a href="index.html" class="btn">
+🏠 Back to Home
+</a>
+
+</div>
+
+</div>
+
+<!-- CAREER OBJECTIVE -->
+<div class="section">
+
+<h3>🎯 Career Objective</h3>
+
+<p>
+To apply my knowledge in leadership, office administration, and web design while
+continuously enhancing my technical, communication, and problem-solving skills.
+I aim to become a responsible professional who contributes positively to the
+community and future workplace environments.
+</p>
+
+</div>
+
+<!-- EDUCATION -->
+<div class="section">
+
+<h3>🎓 Educational Background</h3>
+
+<p>
+<strong>Bachelor of Science in Office Administration</strong><br>
+Clark College of Science and Technology<br>
+Dau, Mabalacat City, Pampanga
+</p>
+
+<br>
+
+<p>
+<strong>Senior High School – ICT Strand</strong><br>
+Focused on computer fundamentals, web development, and information systems concepts.
+</p>
+
+</div>
+
+<!-- TECHNICAL SKILLS -->
+<div class="section">
+
+<h3>💻 Technical Skills</h3>
+
+<ul>
+<li>HTML5 structure and semantic elements</li>
+<li>CSS3 styling, layout, and responsive design</li>
+<li>Basic JavaScript for website interactivity</li>
+<li>Responsive web design for mobile and desktop</li>
+<li>Basic PHP and MySQL knowledge</li>
+<li>UI and website layout design</li>
+</ul>
+
+</div>
+
+<!-- SOFT SKILLS -->
+<div class="section">
+
+<h3>🤝 Personal & Leadership Skills</h3>
+
+<ul>
+<li>Leadership and organizational management</li>
+<li>Communication and public speaking</li>
+<li>Time management and discipline</li>
+<li>Teamwork and collaboration</li>
+<li>Problem-solving and adaptability</li>
+<li>Creativity and willingness to learn</li>
+</ul>
+
+</div>
+
+<!-- SKILL LEVELS -->
+<div class="section">
+
+<h3>📊 Skill Levels</h3>
+
+<div class="skill">
+<div class="skill-title">Leadership – 90%</div>
+<div class="bar">
+<div class="fill" style="width:90%;">90%</div>
+</div>
+</div>
+
+<div class="skill">
+<div class="skill-title">Communication – 85%</div>
+<div class="bar">
+<div class="fill" style="width:85%;">85%</div>
+</div>
+</div>
+
+<div class="skill">
+<div class="skill-title">HTML/CSS – 75%</div>
+<div class="bar">
+<div class="fill" style="width:75%;">75%</div>
+</div>
+</div>
+
+<div class="skill">
+<div class="skill-title">Teamwork – 90%</div>
+<div class="bar">
+<div class="fill" style="width:90%;">90%</div>
+</div>
+</div>
+
+</div>
+
+<!-- EXPERIENCE -->
+<div class="section">
+
+<h3>🏆 Experience & Projects</h3>
+
+<ul>
+<li>Serving as PYAP President of Barangay Dau</li>
+<li>Developed responsive portfolio and school websites</li>
+<li>Participated in leadership seminars and youth programs</li>
+<li>Created web-based projects using HTML and CSS</li>
+<li>Participated in community outreach and volunteer activities</li>
+</ul>
+
+</div>
+
+<!-- ACHIEVEMENTS -->
+<div class="section">
+
+<h3>🥇 Achievements</h3>
+
+<ul>
+<li>With Honors Student</li>
+<li>Best in ICT Subject</li>
+<li>Completed multiple responsive web projects</li>
+<li>Recognized youth leader in community activities</li>
+</ul>
+
+</div>
+
+<!-- QUOTE -->
+<div class="quote">
+
+<h2>Personal Motto</h2>
+
+<p>
+“Success comes from dedication, leadership, continuous learning,
+and the willingness to improve every day.”
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+
+<p>
+© 2026 Justin Villanueva | Personal Portfolio
+</p>
+
+</footer>
+
+<!-- SCRIPT -->
+<script>
+
+function toggleMenu(){
+    document.getElementById("nav").classList.toggle("show");
+}
+
+</script>
+
+</body>
+</html>

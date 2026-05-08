@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>My Skills | Justin Villanueva</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f6f8;
+    color:#333;
+    line-height:1.6;
+}
+
+/* HEADER */
+header{
+    background:#0a3d62;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.nav{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 20px;
+}
+
+.logo{
+    color:white;
+    font-size:24px;
+    font-weight:bold;
+}
+
+nav{
+    display:flex;
+    gap:18px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#38ada9;
+}
+
+.menu{
+    display:none;
+    color:white;
+    font-size:28px;
+    cursor:pointer;
+}
+
+/* HERO */
+.hero{
+    background:linear-gradient(to right,#1e90ff,#38ada9);
+    color:white;
+    text-align:center;
+    padding:80px 20px;
+}
+
+.hero h1{
+    font-size:48px;
+    margin-bottom:10px;
+}
+
+.hero p{
+    font-size:20px;
+}
+
+/* CONTAINER */
+.container{
+    max-width:1150px;
+    margin:40px auto;
+    padding:20px;
+}
+
+/* BOX */
+.box{
+    background:white;
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom:35px;
+}
+
+.box h2{
+    color:#0a3d62;
+    margin-bottom:20px;
+    font-size:35px;
+}
+
+.box p{
+    font-size:18px;
+}
+
+/* SKILLS GRID */
+.skills-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+/* CARD */
+.card{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card h3{
+    color:#1e90ff;
+    margin-bottom:15px;
+    font-size:25px;
+}
+
+.card ul{
+    padding-left:20px;
+}
+
+.card li{
+    margin-bottom:10px;
+    font-size:17px;
+}
+
+/* SKILL BARS */
+.skill{
+    margin-bottom:25px;
+}
+
+.skill h4{
+    margin-bottom:10px;
+    color:#0a3d62;
+}
+
+.bar{
+    background:#ddd;
+    border-radius:20px;
+    overflow:hidden;
+    height:25px;
+}
+
+.fill{
+    height:100%;
+    background:linear-gradient(to right,#1e90ff,#38ada9);
+    text-align:right;
+    padding-right:10px;
+    color:white;
+    font-weight:bold;
+    line-height:25px;
+}
+
+/* QUOTE */
+.quote{
+    background:#0a3d62;
+    color:white;
+    text-align:center;
+    padding:50px 20px;
+    border-radius:15px;
+    margin-top:40px;
+}
+
+.quote h2{
+    font-size:35px;
+    margin-bottom:15px;
+}
+
+/* BUTTON */
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:14px 28px;
+    background:#1e90ff;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:white;
+    color:#0a3d62;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    background:#0a3d62;
+    color:white;
+    padding:20px;
+    margin-top:50px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+    nav{
+        display:none;
+        flex-direction:column;
+        background:#0a3d62;
+        position:absolute;
+        top:60px;
+        left:0;
+        width:100%;
+    }
+
+    nav.show{
+        display:flex;
+    }
+
+    nav a{
+        padding:15px;
+        text-align:center;
+        border-top:1px solid rgba(255,255,255,0.2);
+    }
+
+    .menu{
+        display:block;
+    }
+
+    .hero h1{
+        font-size:35px;
+    }
+
+    .hero p{
+        font-size:17px;
+    }
+
+    .box{
+        padding:25px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+
+<div class="nav">
+
+<div class="logo">
+MyPortfolio
+</div>
+
+<div class="menu" onclick="toggleMenu()">☰</div>
+
+<nav id="nav">
+
+<a href="index.html">Home</a>
+<a href="gallery.html">Gallery</a>
+<a href="about.html">About</a>
+<a href="skills.html">Skills</a>
+<a href="education.html">Education</a>
+<a href="experience.html">Experiences</a>
+<a href="achievements.html">Achievements</a>
+<a href="hobbies.html">Hobbies</a>
+<a href="contact.html">Contact</a>
+<a href="resume.html">Resume</a>
+
+</nav>
+
+</div>
+
+</header>
+
+<!-- HERO -->
+<section class="hero">
+
+<h1>My Skills</h1>
+
+<p>
+Skills and abilities that help me grow as a student, leader, and aspiring professional.
+</p>
+
+</section>
+
+<!-- MAIN CONTENT -->
+<div class="container">
+
+<!-- INTRO -->
+<div class="box">
+
+<h2>About My Skills</h2>
+
+<p>
+As a student leader and aspiring web developer, I continuously improve my technical 
+and personal skills to become more effective in academics, leadership, and community service.
+</p>
+
+</div>
+
+<!-- SKILLS GRID -->
+<div class="skills-grid">
+
+<!-- TECHNICAL -->
+<div class="card">
+
+<h3>💻 Technical Skills</h3>
+
+<ul>
+<li>HTML – Creating webpage structures</li>
+<li>CSS – Styling and responsive layouts</li>
+<li>Basic Web Design</li>
+<li>Responsive Web Design</li>
+<li>Basic JavaScript</li>
+<li>UI Design Principles</li>
+</ul>
+
+</div>
+
+<!-- SOFT SKILLS -->
+<div class="card">
+
+<h3>🤝 Other Skills</h3>
+
+<ul>
+<li>Leadership</li>
+<li>Communication</li>
+<li>Teamwork</li>
+<li>Public Speaking</li>
+<li>Time Management</li>
+<li>Problem Solving</li>
+<li>Adaptability and Willingness to Learn</li>
+</ul>
+
+</div>
+
+</div>
+
+<!-- SKILL LEVELS -->
+<div class="box">
+
+<h2>Skill Levels</h2>
+
+<!-- LEADERSHIP -->
+<div class="skill">
+
+<h4>Leadership – 90%</h4>
+
+<div class="bar">
+<div class="fill" style="width:90%;">
+90%
+</div>
+</div>
+
+</div>
+
+<!-- COMMUNICATION -->
+<div class="skill">
+
+<h4>Communication – 85%</h4>
+
+<div class="bar">
+<div class="fill" style="width:85%;">
+85%
+</div>
+</div>
+
+</div>
+
+<!-- HTML/CSS -->
+<div class="skill">
+
+<h4>HTML/CSS – 75%</h4>
+
+<div class="bar">
+<div class="fill" style="width:75%;">
+75%
+</div>
+</div>
+
+</div>
+
+<!-- TEAMWORK -->
+<div class="skill">
+
+<h4>Teamwork – 90%</h4>
+
+<div class="bar">
+<div class="fill" style="width:90%;">
+90%
+</div>
+</div>
+
+</div>
+
+</div>
+
+<!-- QUOTE -->
+<div class="quote">
+
+<h2>Personal Development</h2>
+
+<p>
+“I believe that skills are developed through continuous learning, experience, 
+hard work, and dedication.”
+</p>
+
+<a href="index.html" class="btn">
+← Back to Home
+</a>
+
+</div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+
+<p>
+© 2026 Justin Villanueva | Personal Portfolio
+</p>
+
+</footer>
+
+<!-- SCRIPT -->
+<script>
+
+function toggleMenu(){
+    document.getElementById("nav").classList.toggle("show");
+}
+
+</script>
+
+</body>
+</html>

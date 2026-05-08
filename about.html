@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>About Me | Justin Villanueva</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f6f8;
+    color:#333;
+    line-height:1.6;
+}
+
+/* HEADER */
+header{
+    background:#0a3d62;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.nav{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 20px;
+}
+
+.logo{
+    color:white;
+    font-size:24px;
+    font-weight:bold;
+}
+
+nav{
+    display:flex;
+    gap:18px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#38ada9;
+}
+
+.menu{
+    display:none;
+    color:white;
+    font-size:28px;
+    cursor:pointer;
+}
+
+/* HERO */
+.hero{
+    background:linear-gradient(to right,#1e90ff,#38ada9);
+    color:white;
+    text-align:center;
+    padding:80px 20px;
+}
+
+.hero h1{
+    font-size:48px;
+    margin-bottom:10px;
+}
+
+.hero p{
+    font-size:20px;
+}
+
+/* CONTAINER */
+.container{
+    max-width:1100px;
+    margin:40px auto;
+    padding:20px;
+}
+
+/* ABOUT SECTION */
+.about-box{
+    background:white;
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom:30px;
+}
+
+.about-box h2{
+    color:#0a3d62;
+    margin-bottom:20px;
+    font-size:35px;
+}
+
+.about-box p{
+    font-size:18px;
+    text-align:justify;
+}
+
+/* INFO CARDS */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card h3{
+    color:#1e90ff;
+    margin-bottom:15px;
+    font-size:25px;
+}
+
+.card p{
+    font-size:17px;
+}
+
+/* QUOTE */
+.quote{
+    background:#0a3d62;
+    color:white;
+    text-align:center;
+    padding:50px 20px;
+    border-radius:15px;
+    margin-top:40px;
+}
+
+.quote h2{
+    font-size:35px;
+    margin-bottom:15px;
+}
+
+/* BUTTON */
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:14px 28px;
+    background:#1e90ff;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:white;
+    color:#0a3d62;
+}
+
+/* FOOTER */
+footer{
+    background:#0a3d62;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:50px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+    nav{
+        display:none;
+        flex-direction:column;
+        background:#0a3d62;
+        position:absolute;
+        top:60px;
+        left:0;
+        width:100%;
+    }
+
+    nav.show{
+        display:flex;
+    }
+
+    nav a{
+        padding:15px;
+        text-align:center;
+        border-top:1px solid rgba(255,255,255,0.2);
+    }
+
+    .menu{
+        display:block;
+    }
+
+    .hero h1{
+        font-size:35px;
+    }
+
+    .hero p{
+        font-size:17px;
+    }
+
+    .about-box{
+        padding:25px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+
+<div class="nav">
+
+<div class="logo">
+MyPortfolio
+</div>
+
+<div class="menu" onclick="toggleMenu()">☰</div>
+
+<nav id="nav">
+
+<a href="index.html">Home</a>
+<a href="gallery.html">Gallery</a>
+<a href="about.html">About</a>
+<a href="skills.html">Skills</a>
+<a href="education.html">Education</a>
+<a href="experience.html">Experiences</a>
+<a href="achievements.html">Achievements</a>
+<a href="hobbies.html">Hobbies</a>
+<a href="contact.html">Contact</a>
+<a href="resume.html">Resume</a>
+
+</nav>
+
+</div>
+
+</header>
+
+<!-- HERO -->
+<section class="hero">
+
+<h1>About Me</h1>
+
+<p>
+Learn more about my journey, leadership, education, and future goals.
+</p>
+
+</section>
+
+<!-- MAIN CONTENT -->
+<div class="container">
+
+<!-- BIOGRAPHY -->
+<div class="about-box">
+
+<h2>Biography</h2>
+
+<p>
+I am <strong>Justin Villanueva</strong>, a dedicated student and youth leader 
+from Barangay Dau, Mabalacat City, Pampanga. I am currently pursuing a 
+<strong>Bachelor of Science in Office Administration</strong> at 
+Clark College of Science and Technology.
+<br><br>
+
+As the <strong>PYAP President</strong>, I actively lead programs and activities 
+that aim to inspire, guide, and empower the youth in our community.
+<br><br>
+
+I strongly believe that leadership is about service, responsibility, and creating 
+positive change. Through my experiences in school and community activities, I continue 
+to grow as a student, leader, and future professional.
+</p>
+
+</div>
+
+<!-- CARDS -->
+<div class="cards">
+
+<!-- EDUCATION -->
+<div class="card">
+
+<h3>🎓 Educational Background</h3>
+
+<p>
+• Bachelor of Science in Office Administration
+<br><br>
+• Clark College of Science and Technology
+<br><br>
+• Dau, Mabalacat City, Pampanga
+</p>
+
+</div>
+
+<!-- GOALS -->
+<div class="card">
+
+<h3>🚀 Career Goals</h3>
+
+<p>
+My goal is to become a successful professional in office administration while 
+continuing to serve the community through leadership and public service.
+</p>
+
+</div>
+
+<!-- INTERESTS -->
+<div class="card">
+
+<h3>💡 Interests</h3>
+
+<p>
+I am passionate about leadership, youth empowerment, organizational management, 
+community service, and web development.
+</p>
+
+</div>
+
+<!-- LEADERSHIP -->
+<div class="card">
+
+<h3>🏆 Leadership Experience</h3>
+
+<p>
+Serving as PYAP President has helped me develop communication, teamwork, 
+decision-making, and leadership skills that prepare me for future challenges.
+</p>
+
+</div>
+
+</div>
+
+<!-- QUOTE -->
+<div class="quote">
+
+<h2>My Personal Vision</h2>
+
+<p>
+“To become a responsible leader and professional who inspires the youth 
+and contributes to the progress of the community.”
+</p>
+
+<a href="index.html" class="btn">
+← Back to Home
+</a>
+
+</div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+
+<p>
+© 2026 Justin Villanueva | Personal Portfolio
+</p>
+
+</footer>
+
+<!-- SCRIPT -->
+<script>
+
+function toggleMenu(){
+    document.getElementById("nav").classList.toggle("show");
+}
+
+</script>
+
+</body>
+</html>

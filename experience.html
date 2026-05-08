@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Experience | Justin Villanueva Portfolio</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f6f8;
+    color:#333;
+    line-height:1.6;
+}
+
+/* HEADER */
+header{
+    background:#0a3d62;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.nav{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 20px;
+}
+
+.logo{
+    color:white;
+    font-size:24px;
+    font-weight:bold;
+}
+
+nav{
+    display:flex;
+    gap:18px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#38ada9;
+}
+
+.menu{
+    display:none;
+    color:white;
+    font-size:28px;
+    cursor:pointer;
+}
+
+/* HERO */
+.hero{
+    background:linear-gradient(to right,#1e90ff,#38ada9);
+    color:white;
+    text-align:center;
+    padding:80px 20px;
+}
+
+.hero h1{
+    font-size:48px;
+    margin-bottom:10px;
+}
+
+.hero p{
+    font-size:20px;
+    max-width:800px;
+    margin:auto;
+}
+
+/* CONTAINER */
+.container{
+    max-width:1200px;
+    margin:40px auto;
+    padding:20px;
+}
+
+/* INTRO BOX */
+.intro{
+    background:white;
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom:40px;
+}
+
+.intro h2{
+    color:#0a3d62;
+    margin-bottom:20px;
+    font-size:35px;
+}
+
+.intro p{
+    font-size:18px;
+    text-align:justify;
+}
+
+/* CARDS */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card h3{
+    color:#1e90ff;
+    margin-bottom:15px;
+    font-size:24px;
+}
+
+.card p{
+    font-size:16px;
+}
+
+/* STATS */
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    margin-top:40px;
+}
+
+.stat-box{
+    background:#0a3d62;
+    color:white;
+    padding:30px;
+    text-align:center;
+    border-radius:15px;
+}
+
+.stat-box h2{
+    font-size:40px;
+    margin-bottom:10px;
+}
+
+/* QUOTE */
+.quote{
+    background:white;
+    padding:50px 30px;
+    border-radius:15px;
+    margin-top:50px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.quote h2{
+    color:#0a3d62;
+    margin-bottom:20px;
+    font-size:35px;
+}
+
+.quote p{
+    font-size:20px;
+    color:#555;
+}
+
+/* BUTTON */
+.btn{
+    display:inline-block;
+    margin-top:30px;
+    padding:14px 30px;
+    background:#1e90ff;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#0a3d62;
+}
+
+/* FOOTER */
+footer{
+    background:#0a3d62;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:50px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+    nav{
+        display:none;
+        flex-direction:column;
+        background:#0a3d62;
+        position:absolute;
+        top:60px;
+        left:0;
+        width:100%;
+    }
+
+    nav.show{
+        display:flex;
+    }
+
+    nav a{
+        padding:15px;
+        text-align:center;
+        border-top:1px solid rgba(255,255,255,0.2);
+    }
+
+    .menu{
+        display:block;
+    }
+
+    .hero h1{
+        font-size:35px;
+    }
+
+    .hero p{
+        font-size:17px;
+    }
+
+    .intro{
+        padding:25px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+
+<div class="nav">
+
+<div class="logo">
+MyPortfolio
+</div>
+
+<div class="menu" onclick="toggleMenu()">☰</div>
+
+<nav id="nav">
+
+<a href="index.html">Home</a>
+<a href="gallery.html">Gallery</a>
+<a href="about.html">About</a>
+<a href="skills.html">Skills</a>
+<a href="education.html">Education</a>
+<a href="experience.html">Experiences</a>
+<a href="achievements.html">Achievements</a>
+<a href="hobbies.html">Hobbies</a>
+<a href="contact.html">Contact</a>
+<a href="resume.html">Resume</a>
+
+</nav>
+
+</div>
+
+</header>
+
+<!-- HERO -->
+<section class="hero">
+
+<h1>My Experience</h1>
+
+<p>
+Experiences that helped me grow as a student, leader, and aspiring professional.
+</p>
+
+</section>
+
+<!-- MAIN CONTENT -->
+<div class="container">
+
+<!-- INTRO -->
+<div class="intro">
+
+<h2>Experience and Leadership Journey</h2>
+
+<p>
+Throughout my academic and leadership journey, I gained valuable experiences 
+that enhanced my confidence, communication skills, teamwork, and leadership abilities.
+<br><br>
+
+As a student and PYAP President, I continue to participate in activities that 
+help improve the youth and community while also developing my skills in leadership, 
+technology, and public service.
+</p>
+
+</div>
+
+<!-- EXPERIENCE CARDS -->
+<div class="cards">
+
+<!-- CARD 1 -->
+<div class="card">
+
+<h3>🏆 PYAP President</h3>
+
+<p>
+Currently serving as the PYAP President of Barangay Dau. 
+Leading youth activities, community programs, and outreach events 
+that help strengthen youth participation and leadership.
+</p>
+
+</div>
+
+<!-- CARD 2 -->
+<div class="card">
+
+<h3>💻 Web Development</h3>
+
+<p>
+Experienced in creating responsive websites using HTML, CSS, PHP, 
+and MySQL. Passionate about improving web design and developing 
+modern user-friendly systems.
+</p>
+
+</div>
+
+<!-- CARD 3 -->
+<div class="card">
+
+<h3>🤝 Leadership Activities</h3>
+
+<p>
+Participated in various school and barangay leadership activities, 
+seminars, and youth empowerment programs that promote teamwork, 
+communication, and community service.
+</p>
+
+</div>
+
+<!-- CARD 4 -->
+<div class="card">
+
+<h3>🌍 Community Service</h3>
+
+<p>
+Actively involved in community outreach, youth volunteer programs, 
+and barangay initiatives focused on helping and supporting local residents.
+</p>
+
+</div>
+
+<!-- CARD 5 -->
+<div class="card">
+
+<h3>🎤 Public Speaking</h3>
+
+<p>
+Developed confidence in speaking during youth meetings, school activities, 
+and leadership seminars while representing the youth sector.
+</p>
+
+</div>
+
+<!-- CARD 6 -->
+<div class="card">
+
+<h3>📚 Academic Participation</h3>
+
+<p>
+Participated in school projects, collaborative activities, and educational 
+programs that improved my creativity, discipline, and teamwork skills.
+</p>
+
+</div>
+
+</div>
+
+<!-- STATS -->
+<div class="stats">
+
+<div class="stat-box">
+<h2>10+</h2>
+<p>Leadership Activities</p>
+</div>
+
+<div class="stat-box">
+<h2>20+</h2>
+<p>Community Programs</p>
+</div>
+
+<div class="stat-box">
+<h2>5+</h2>
+<p>Web Projects</p>
+</div>
+
+<div class="stat-box">
+<h2>100%</h2>
+<p>Dedication and Service</p>
+</div>
+
+</div>
+
+<!-- QUOTE -->
+<div class="quote">
+
+<h2>My Experience Philosophy</h2>
+
+<p>
+“Experience is the best teacher. Through leadership, service, and continuous learning, 
+I strive to become a better person and future professional.”
+</p>
+
+<a href="index.html" class="btn">
+← Back to Home
+</a>
+
+</div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+
+<p>
+© 2026 Justin Villanueva | Personal Portfolio
+</p>
+
+</footer>
+
+<!-- SCRIPT -->
+<script>
+
+function toggleMenu(){
+    document.getElementById("nav").classList.toggle("show");
+}
+
+</script>
+
+</body>
+</html>

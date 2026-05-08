@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Gallery | Justin Villanueva Portfolio</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f6f8;
+    color:#333;
+}
+
+/* HEADER */
+header{
+    background:#0a3d62;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.nav{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 20px;
+}
+
+.logo{
+    color:white;
+    font-size:24px;
+    font-weight:bold;
+}
+
+nav{
+    display:flex;
+    gap:18px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#38ada9;
+}
+
+.menu{
+    display:none;
+    color:white;
+    font-size:28px;
+    cursor:pointer;
+}
+
+/* HERO */
+.hero{
+    background:linear-gradient(to right,#1e90ff,#38ada9);
+    color:white;
+    text-align:center;
+    padding:70px 20px;
+}
+
+.hero h1{
+    font-size:45px;
+    margin-bottom:10px;
+}
+
+.hero p{
+    font-size:20px;
+    max-width:800px;
+    margin:auto;
+}
+
+/* CONTAINER */
+.container{
+    max-width:1200px;
+    margin:40px auto;
+    padding:20px;
+}
+
+/* GALLERY GRID */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+/* CARD */
+.card{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:20px;
+}
+
+.card-content h3{
+    color:#0a3d62;
+    margin-bottom:10px;
+}
+
+.card-content p{
+    font-size:16px;
+    line-height:1.5;
+}
+
+/* QUOTE SECTION */
+.quote{
+    background:#0a3d62;
+    color:white;
+    text-align:center;
+    padding:50px 20px;
+    border-radius:15px;
+    margin-top:50px;
+}
+
+.quote h2{
+    margin-bottom:15px;
+    font-size:35px;
+}
+
+/* BUTTON */
+.btn{
+    display:inline-block;
+    margin-top:30px;
+    padding:14px 28px;
+    background:#1e90ff;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#0a3d62;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    background:#0a3d62;
+    color:white;
+    padding:20px;
+    margin-top:50px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+    nav{
+        display:none;
+        flex-direction:column;
+        background:#0a3d62;
+        position:absolute;
+        top:60px;
+        left:0;
+        width:100%;
+    }
+
+    nav.show{
+        display:flex;
+    }
+
+    nav a{
+        padding:15px;
+        text-align:center;
+        border-top:1px solid rgba(255,255,255,0.2);
+    }
+
+    .menu{
+        display:block;
+    }
+
+    .hero h1{
+        font-size:35px;
+    }
+
+    .hero p{
+        font-size:17px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+
+<div class="nav">
+
+<div class="logo">
+MyPortfolio
+</div>
+
+<div class="menu" onclick="toggleMenu()">☰</div>
+
+<nav id="nav">
+
+<a href="index.html">Home</a>
+<a href="gallery.html">Gallery</a>
+<a href="about.html">About</a>
+<a href="skills.html">Skills</a>
+<a href="education.html">Education</a>
+<a href="experience.html">Experiences</a>
+<a href="achievements.html">Achievements</a>
+<a href="hobbies.html">Hobbies</a>
+<a href="contact.html">Contact</a>
+<a href="resume.html">Resume</a>
+
+</nav>
+
+</div>
+
+</header>
+
+<!-- HERO -->
+<section class="hero">
+
+<h1>My Gallery</h1>
+
+<p>
+“This page showcases some of my personal moments, activities, 
+and achievements that reflect who I am as a student and a leader.”
+</p>
+
+</section>
+
+<!-- GALLERY -->
+<div class="container">
+
+<div class="grid">
+
+<!-- CARD 1 -->
+<div class="card">
+
+<img src="image/2_n.jpg" alt="Community Service">
+
+<div class="card-content">
+
+<h3>Community Service</h3>
+
+<p>
+“Participating in community service activities in Barangay Dau.”
+</p>
+
+</div>
+
+</div>
+
+<!-- CARD 2 -->
+<div class="card">
+
+<img src="image/4_n.jpg" alt="PYAP Event">
+
+<div class="card-content">
+
+<h3>PYAP Leadership</h3>
+
+<p>
+“Serving as PYAP President during youth events.”
+</p>
+
+</div>
+
+</div>
+
+<!-- CARD 3 -->
+<div class="card">
+
+<img src="image/3_n.jpg" alt="Leadership Training">
+
+<div class="card-content">
+
+<h3>Leadership Seminar</h3>
+
+<p>
+“Attending leadership training and seminars.”
+</p>
+
+</div>
+
+</div>
+
+<!-- CARD 4 -->
+<div class="card">
+
+<img src="image/5_n.jpg" alt="School Friends">
+
+<div class="card-content">
+
+<h3>School Moments</h3>
+
+<p>
+“Moments with friends and classmates at school.”
+</p>
+
+</div>
+
+</div>
+
+<!-- CARD 5 -->
+<div class="card">
+
+<img src="image/8_n.webp" alt="Academic Activities">
+
+<div class="card-content">
+
+<h3>Academic Activities</h3>
+
+<p>
+“Academic activities at Clark College of Science and Technology.”
+</p>
+
+</div>
+
+</div>
+
+<!-- CARD 6 -->
+<div class="card">
+
+<img src="image/7_n.webp" alt="Achievements">
+
+<div class="card-content">
+
+<h3>Achievements</h3>
+
+<p>
+“Celebrating achievements and milestones.”
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- QUOTE -->
+<div class="quote">
+
+<h2>Memories and Experiences</h2>
+
+<p>
+“Every photo tells a story of leadership, friendship, growth, 
+and dedication toward achieving success and helping the community.”
+</p>
+
+<a href="index.html" class="btn">
+← Back to Home
+</a>
+
+</div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+
+<p>
+© 2026 Justin Villanueva | Personal Portfolio
+</p>
+
+</footer>
+
+<!-- SCRIPT -->
+<script>
+
+function toggleMenu(){
+    document.getElementById("nav").classList.toggle("show");
+}
+
+</script>
+
+</body>
+</html>
